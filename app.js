@@ -23,7 +23,6 @@ function randomHexColor() {
 
 $button.addEventListener('click', () => {
   const numSwitch = randomNumber(3)
-  
 
   switch (numSwitch) {
     case 1:
@@ -45,10 +44,13 @@ $button.addEventListener('click', () => {
 })
 
 $copy.addEventListener('click', () => {
+  // Copy color to clipboard 
   navigator.clipboard.writeText(color)
-  $copyAlert.classList.add('active')
 
-  setTimeout(() => {
-    $copyAlert.classList.remove('active')
-  }, 2500)
+  $copyAlert.classList.add('show')
+
+  // Remove alert after 2 seconds
+  setTimeout(() => { 
+    $copyAlert.classList.remove('show')
+  }, 2000)
 })
