@@ -18,7 +18,7 @@ function randomHslColor() {
 }
 
 function randomHexColor() {
-  return `#${randomNumber(16777215).toString(16)}`
+  return `#${(Math.random() * 0xfffff * 1000000).toString(16).slice(0, 6)}`
 }
 
 $button.addEventListener('click', () => {
